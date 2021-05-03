@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+  background: url(../img/Vector.svg); }
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+:root {
+  --color-primary: #308ec3; }
+
+::selection {
+  background-color: var(--color-primary); }
+
+.nav {
+  background-color: #fafafa;
+  height: 15rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 2;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 3px #5e5c5c; }
+  .nav__title {
+    font-weight: 700;
+    letter-spacing: 1;
+    color: var(--color-primary);
+    font-size: 4rem; }
+  .nav__cite {
+    font-size: 1.5rem; }
+
+.header {
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 50rem;
+  gap: 3rem;
+  margin: 0 auto;
+  padding: 4vw;
+  max-width: 120rem; }
+  @media only screen and (max-width: 68.75em) {
+    .header {
+      grid-template-columns: 1fr;
+      padding-left: 8vw;
+      padding-right: 8vw; } }
+  @media only screen and (min-width: 93.75em) {
+    .header {
+      max-width: 200rem; } }
+  .header__title {
+    color: var(--color-primary);
+    font-size: 2.5rem; }
+  .header__content {
+    padding: 3vw; }
+  .header__imgs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center; }
+    .header__imgs img {
+      flex: 10rem;
+      padding: 3vw;
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain; }
+
+.article {
+  margin-top: 2rem; }
+  .article__title {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem; }
+  .article__para {
+    font-size: 1.2rem; }
+
+.footer {
+  width: 100%;
+  height: 10rem;
+  background-color: #fafafa;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 3px #5e5c5c; }
+  .footer .link {
+    text-decoration: none;
+    color: black;
+    background-color: #add9eb;
+    padding: 0 0.5rem;
+    border-radius: 2px;
+    letter-spacing: 2px; }
+  .footer__para {
+    max-width: 120rem;
+    padding-left: 8vw;
+    padding-right: 8vw; }
+    @media only screen and (min-width: 93.75em) {
+      .footer__para {
+        max-width: 200rem; } }
