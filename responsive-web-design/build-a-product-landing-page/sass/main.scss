@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+$bp-small: 37.5em; // 600px
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	flex-direction: column;
+	line-height: 1.6;
+	font-size: 1.5rem;
+}
+
+.nav {
+	position: fixed;
+	height: 10vh;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	background-color: rgb(241, 241, 240);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem;
+	@media only screen and(max-width: $bp-small) {
+		flex-direction: column-reverse;
+		height: auto;
+	}
+
+	&__logo-container {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		height: 4rem;
+		width: 4rem;
+		display: block;
+		margin-right: 1rem;
+	}
+
+	&__links {
+		display: flex;
+	}
+
+	&__link {
+		display: inline-block;
+		margin: 1rem;
+		cursor: pointer;
+		a {
+			text-decoration: none;
+			color: black;
+		}
+	}
+}
+
+// Hacky way to fix issue i structured my page differently just to pass the fcc tests without changing to much stuff i did it this way
+
+.header {
+	margin-top: 10vh;
+	height: 90vh;
+	width: 100%;
+	background-image: linear-gradient(
+			to right bottom,
+			rgba(255, 255, 255, 0.651),
+			rgba(160, 160, 160, 0.568)
+		),
+		url(https://images.unsplash.com/photo-1560264280-88b68371db39?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 3rem 2rem;
+		background-color: rgba(255, 255, 255, 0.685);
+		border-radius: 3px;
+		text-align: center;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-weight: 400;
+		letter-spacing: 2px;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		margin-top: 2rem;
+	}
+
+	&__email {
+		padding: 0.5rem;
+	}
+
+	&__btn {
+		padding: 1rem;
+		border-radius: 3px;
+		background-color: rgb(255, 201, 23);
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+}
+
+.main {
+	background-color: rgb(255, 255, 255);
+	width: 100%;
+}
+
+.video-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(241, 241, 240);
+
+	clip-path: polygon(0 0, 100% 0, 100% 80%, 0 93%);
+	padding: 15vmin 0 30vmin 0;
+}
+
+.options-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-bottom: 5rem;
+}
+
+.card {
+	margin: 2rem;
+	padding: 2rem;
+	background-color: rgb(187, 233, 112);
+	border-radius: 3px;
+	flex: 30rem 0 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__title {
+		color: #ffc400;
+		font-weight: 400;
+		padding: 1rem;
+		box-shadow: 1px 1px 6px rgba(49, 49, 49, 0.308);
+		background-color: rgb(107, 107, 107);
+		border-radius: 3px;
+		margin: 1rem;
+	}
+
+	&__price {
+		margin: 1rem;
+		font-size: 2rem;
+	}
+
+	&__description {
+		text-align: start;
+		margin: 1rem;
+	}
+
+	&__btn {
+		padding: 1rem 2rem;
+		border: none;
+		border-radius: 2px;
+		background-color: #ffc917;
+		cursor: pointer;
+	}
+
+	&__pic {
+		background-image: linear-gradient(
+				to right bottom,
+				rgba(136, 135, 135, 0.24),
+				rgba(80, 80, 80, 0.651)
+			),
+			url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1002&q=80');
+		background-size: cover;
+		background-repeat: no-repeat;
+		flex-basis: 15rem;
+		align-self: stretch;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.card:nth-child(2) {
+	.card__pic {
+		background-image: linear-gradient(
+				to right bottom,
+				rgba(136, 135, 135, 0.24),
+				rgba(80, 80, 80, 0.651)
+			),
+			url('https://images.unsplash.com/photo-1583508915901-b5f84c1dcde1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c29mdHdhcmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+	}
+}
+
+.card:nth-child(3) {
+	.card__pic {
+		background-image: linear-gradient(
+				to right bottom,
+				rgba(136, 135, 135, 0.24),
+				rgba(80, 80, 80, 0.651)
+			),
+			url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+	}
+}
+
+.card:nth-child(4) {
+	.card__pic {
+		background-image: linear-gradient(
+				to right bottom,
+				rgba(136, 135, 135, 0.24),
+				rgba(80, 80, 80, 0.651)
+			),
+			url('https://www.hungerford.tech/img/blog/grand-rapids-it-services.jpg');
+	}
+}
+
+.footer {
+	height: 10vh;
+	width: 100%;
+	background-color: rgb(241, 241, 240);
+	box-shadow: 1px 1px 3px black;
+	margin-top: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+
+	@media only screen and(max-width: $bp-small) {
+		flex-direction: column-reverse;
+	}
+
+	&__copyright {
+		margin-left: 1rem;
+	}
+
+	&__links {
+		text-decoration: none;
+		margin-right: 1rem;
+	}
+
+	&__link {
+		text-decoration: none;
+		display: inline-block;
+		margin: 1rem;
+		text-transform: uppercase;
+		color: black;
+	}
+}
