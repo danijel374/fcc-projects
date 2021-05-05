@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<script
+			src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+			defer
+		></script>
+	</head>
+	<body>
+		<nav class="nav" id="navbar">
+			<header class="heading-primary nav__title">React Documentation</header>
+			<ul class="nav__list">
+				<li class="nav__item">
+					<a href="#Introduction" class="nav__link nav-link">Introduction</a>
+				</li>
+				<li class="nav__item">
+					<a href="#Hello_World" class="nav__link nav-link">Hello World</a>
+				</li>
+				<li class="nav__item">
+					<a href="#Introducing_JSX" class="nav__link nav-link">
+						Introducing JSX</a
+					>
+				</li>
+				<li class="nav__item">
+					<a href="#Rendering_Elements" class="nav__link nav-link">
+						Rendering Elements</a
+					>
+				</li>
+				<li class="nav__item">
+					<a href="#Components_and_Props" class="nav__link nav-link">
+						Components and Props</a
+					>
+				</li>
+				<li class="nav__item">
+					<a href="#State_and_Lifecycle" class="nav__link nav-link">
+						State and Lifecycle</a
+					>
+				</li>
+				<li class="nav__item">
+					<a href="#Handling_Events" class="nav__link nav-link">
+						Handling Events</a
+					>
+				</li>
+				<li class="nav__item">
+					<a href="#Conditional_Rendering" class="nav__link nav-link">
+						Conditional Rendering</a
+					>
+				</li>
+				<li class="nav__item">
+					<a href="#Lists_and_Keys" class="nav__link nav-link">
+						Lists and Keys</a
+					>
+				</li>
+				<li class="nav__item">
+					<a href="#Forms" class="nav__link nav-link"> Forms</a>
+				</li>
+				<li class="nav__item">
+					<a href="#Lifting_State_Up" class="nav__link nav-link">
+						Lifting State Up</a
+					>
+				</li>
+				<li class="nav__item">
+					<a href="#Composition_vs_Inheritance" class="nav__link nav-link">
+						Composition vs Inheritance</a
+					>
+				</li>
+				<li class="nav__item">
+					<a href="#Thinking_in_React" class="nav__link nav-link">
+						Thinking In React</a
+					>
+				</li>
+			</ul>
+		</nav>
+		<main class="main" id="main-doc">
+			<section class="main__section main-section" id="Introduction">
+				<header class="heading-secondary">Introduction</header>
+				<p class="main__section__para">
+					React makes it painless to create interactive UIs. Design simple views
+					for each state in your application, and React will efficiently update
+					and render just the right components when your data changes.
+					Declarative views make your code more predictable and easier to debug.
+				</p>
+				<ul class="main__section__list">
+					<li>Easy to learn and use</li>
+					<li>Reusable components</li>
+					<li>Great tool set for developers</li>
+					<li>Fast rendering with virtual DOM</li>
+					<li>Testability</li>
+				</ul>
+			</section>
+			<section class="main__section main-section" id="Hello_World">
+				<header class="heading-secondary">Hello World</header>
+				<p class="main__section__para">
+					The smallest React example looks like this:
+				</p>
+				<code class="main__section__code"
+					>ReactDOM.render&lpar; &lt;h1&gt; Hello, world! &lt;/h1&gt; ,
+					document.getElementById &lpar;'root'&rpar; &rpar;;</code
+				>
+				<p class="main__section__para">
+					It displays a heading saying “Hello, world!” on the page.
+				</p>
+			</section>
+			<section class="main__section main-section" id="Introducing_JSX">
+				<header class="heading-secondary">Introducing JSX</header>
+				<p class="main__section__para">Consider this variable declaration:</p>
+				<code class="main__section__code"
+					>const element = &lt;h1&gt;Hello, world!&lt;/h1&gt; ;</code
+				>
+				<p class="main__section__para">
+					This funny tag syntax is neither a string nor HTML.
+				</p>
+				<p class="main__section__para">
+					It is called JSX, and it is a syntax extension to JavaScript. We
+					recommend using it with React to describe what the UI should look
+					like. JSX may remind you of a template language, but it comes with the
+					full power of JavaScript.
+				</p>
+			</section>
+			<section class="main__section main-section" id="Rendering_Elements">
+				<header class="heading-secondary">Rendering Elements</header>
+				<p class="main__section__para">
+					Elements are the smallest building blocks of React apps.
+				</p>
+				<p class="main__section__para">
+					An element describes what you want to see on the screen:.
+				</p>
+				<code class="main__section__code"
+					>const element = &lt;h1&gt;Hello, world&lt;/h1&gt; ;</code
+				>
+				<p class="main__section__para">
+					It displays a heading saying “Hello, world!” on the page.
+				</p>
+			</section>
+			<section class="main__section main-section" id="Components_and_Props">
+				<header class="heading-secondary">Components and Props</header>
+				<p class="main__section__para">
+					The smallest React example looks like this:
+				</p>
+				<code class="main__section__code"
+					>ReactDOM.render&lpar; &lt;h1&gt; Hello, world! &lt;/h1&gt; ,
+					document.getElementById &lpar;'root'&rpar; &rpar;;</code
+				>
+				<p class="main__section__para">
+					It displays a heading saying “Hello, world!” on the page.
+				</p>
+			</section>
+			<section class="main__section main-section" id="State_and_Lifecycle">
+				<header class="heading-secondary">State and Lifecycle</header>
+				<p class="main__section__para">
+					The smallest React example looks like this:
+				</p>
+				<code class="main__section__code"
+					>ReactDOM.render&lpar; &lt;h1&gt; Hello, world! &lt;/h1&gt; ,
+					document.getElementById &lpar;'root'&rpar; &rpar;;</code
+				>
+				<p class="main__section__para">
+					It displays a heading saying “Hello, world!” on the page.
+				</p>
+			</section>
+			<section class="main__section main-section" id="Handling_Events">
+				<header class="heading-secondary">Handling Events</header>
+				<p class="main__section__para">
+					The smallest React example looks like this:
+				</p>
+				<code class="main__section__code"
+					>ReactDOM.render&lpar; &lt;h1&gt; Hello, world! &lt;/h1&gt; ,
+					document.getElementById &lpar;'root'&rpar; &rpar;;</code
+				>
+				<p class="main__section__para">
+					It displays a heading saying “Hello, world!” on the page.
+				</p>
+			</section>
+			<section class="main__section main-section" id="Conditional_Rendering">
+				<header class="heading-secondary">Conditional Rendering</header>
+				<p class="main__section__para">
+					The smallest React example looks like this:
+				</p>
+				<code class="main__section__code"
+					>ReactDOM.render&lpar; &lt;h1&gt; Hello, world! &lt;/h1&gt; ,
+					document.getElementById &lpar;'root'&rpar; &rpar;;</code
+				>
+				<p class="main__section__para">
+					It displays a heading saying “Hello, world!” on the page.
+				</p>
+			</section>
+			<section class="main__section main-section" id="Lists_and_Keys">
+				<header class="heading-secondary">Lists and Keys</header>
+				<p class="main__section__para">
+					The smallest React example looks like this:
+				</p>
+				<code class="main__section__code"
+					>ReactDOM.render&lpar; &lt;h1&gt; Hello, world! &lt;/h1&gt; ,
+					document.getElementById &lpar;'root'&rpar; &rpar;;</code
+				>
+				<p class="main__section__para">
+					It displays a heading saying “Hello, world!” on the page.
+				</p>
+			</section>
+			<section class="main__section main-section" id="Forms">
+				<header class="heading-secondary">Forms</header>
+				<p class="main__section__para">
+					The smallest React example looks like this:
+				</p>
+				<code class="main__section__code"
+					>ReactDOM.render&lpar; &lt;h1&gt; Hello, world! &lt;/h1&gt; ,
+					document.getElementById &lpar;'root'&rpar; &rpar;;</code
+				>
+				<p class="main__section__para">
+					It displays a heading saying “Hello, world!” on the page.
+				</p>
+			</section>
+			<section class="main__section main-section" id="Lifting_State_Up">
+				<header class="heading-secondary">Lifting State Up</header>
+				<p class="main__section__para">
+					The smallest React example looks like this:
+				</p>
+				<code class="main__section__code"
+					>ReactDOM.render&lpar; &lt;h1&gt; Hello, world! &lt;/h1&gt; ,
+					document.getElementById &lpar;'root'&rpar; &rpar;;</code
+				>
+				<p class="main__section__para">
+					It displays a heading saying “Hello, world!” on the page.
+				</p>
+			</section>
+			<section
+				class="main__section main-section"
+				id="Composition_vs_Inheritance"
+			>
+				<header class="heading-secondary">Composition vs Inheritance</header>
+				<p class="main__section__para">
+					The smallest React example looks like this:
+				</p>
+				<code class="main__section__code"
+					>ReactDOM.render&lpar; &lt;h1&gt; Hello, world! &lt;/h1&gt; ,
+					document.getElementById &lpar;'root'&rpar; &rpar;;</code
+				>
+				<p class="main__section__para">
+					It displays a heading saying “Hello, world!” on the page.
+				</p>
+			</section>
+			<section class="main__section main-section" id="Thinking_in_React">
+				<header class="heading-secondary">Thinking in React</header>
+				<p class="main__section__para">
+					The smallest React example looks like this:
+				</p>
+				<code class="main__section__code"
+					>ReactDOM.render&lpar; &lt;h1&gt; Hello, world! &lt;/h1&gt; ,
+					document.getElementById &lpar;'root'&rpar; &rpar;;</code
+				>
+				<p class="main__section__para">
+					It displays a heading saying “Hello, world!” on the page.
+				</p>
+			</section>
+		</main>
+	</body>
+</html>
