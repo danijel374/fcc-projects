@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap");
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
+
+::selection {
+  background-color: black;
+  color: white; }
 
 :root {
   --font-primary: 'Poppins', sans-serif;
@@ -56,6 +61,9 @@ body {
     line-height: 1;
     color: black;
     cursor: pointer; }
+    .nav__link a {
+      text-decoration: none;
+      color: black; }
     .nav__link:hover {
       border-bottom: 2px solid currentColor; }
   @media only screen and (max-width: 37.5em) {
@@ -106,7 +114,7 @@ body {
   background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
-  padding-bottom: 5rem; }
+  padding: 5rem 0; }
   .projects__title {
     margin: 3rem;
     text-align: center; }
@@ -124,8 +132,7 @@ body {
   background-color: var(--color-white);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  cursor: pointer; }
+  justify-content: space-around; }
   .project__title {
     text-align: center;
     font-size: 2.2rem; }
@@ -133,8 +140,12 @@ body {
     max-width: 100%;
     display: block;
     transition: transform 0.2s; }
-  .project:hover img {
-    transform: scale(1.3); }
+    .project__img:hover {
+      transform: scale(1.3); }
+
+.footer a {
+  text-decoration: none;
+  color: white; }
 
 .footer__content {
   display: flex;
@@ -155,9 +166,13 @@ body {
   justify-content: center;
   width: 100%; }
   .footer__contacts__para {
-    flex-basis: 20rem;
-    margin: 1rem;
-    cursor: pointer; }
+    margin: 2rem;
+    cursor: pointer;
+    width: 15rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
     .footer__contacts__para:hover i {
       background-color: black;
       border: 1px solid transparent; }
@@ -166,7 +181,8 @@ body {
     border-radius: 50%;
     margin: 1rem;
     border: 1px solid var(--color-white);
-    transition: all 0.2s; }
+    transition: all 0.2s;
+    color: white; }
 
 .footer__copy {
   display: flex;
@@ -178,6 +194,6 @@ body {
   text-align: center; }
   .footer__copy__left {
     margin-right: 3rem; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 56.25em) {
     .footer__copy {
       flex-direction: column; } }

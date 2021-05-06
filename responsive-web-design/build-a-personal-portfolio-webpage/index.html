@@ -4,25 +4,29 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Portfolio - fcc</title>
 		<script
 			src="https://kit.fontawesome.com/f89bbddabc.js"
 			crossorigin="anonymous"
 			defer
 		></script>
 		<link rel="stylesheet" href="css/style.css" />
-		<script src="typewriter.js"></script>
+		<script src="typewriter.js" defer></script>
+		<script
+			src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+			defer
+		></script>
 	</head>
 	<body>
-		<nav class="nav">
+		<nav class="nav" id="navbar">
 			<img src="img/logo.png" alt="Lion svg pichture" class="nav__logo" />
 			<ul class="nav__list">
-				<li class="nav__link">About</li>
-				<li class="nav__link">Work</li>
-				<li class="nav__link">Contact</li>
+				<li class="nav__link"><a href="#welcome-section">About</a></li>
+				<li class="nav__link"><a href="#projects">Work</a></li>
+				<li class="nav__link"><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
-		<header class="header">
+		<section class="header" id="welcome-section">
 			<h1 class="header__title">
 				I am Danijel the
 				<span
@@ -36,54 +40,78 @@
 				building projects.
 			</p>
 			<button class="header__btn">View my work</button>
-		</header>
-		<section class="projects">
+		</section>
+		<section class="projects" id="projects">
 			<h2 class="projects__title">These are some of my projects</h2>
 			<div class="projects__projects-container">
-				<div class="project">
-					<img class="project__img" src="img/product-landing.png" alt="" />
-					<h3 class="project__title">Product landing page</h3>
+				<div class="project project-tile">
+					<a href="https://codepen.io/danijel7/pen/KKWPZdJ" target="_blank">
+						<img class="project__img" src="img/product-landing.png" alt=""
+					/></a>
+					<h3 class="project__title project-title">Product landing page</h3>
 				</div>
-				<div class="project">
-					<img class="project__img" src="img/surver-form.png" alt="" />
-					<h3 class="project__title">Survey form</h3>
+				<div class="project project-tile">
+					<a href="https://codepen.io/danijel7/pen/QWdezRb" target="_blank">
+						<img class="project__img" src="img/surver-form.png" alt=""
+					/></a>
+					<h3 class="project__title project-title">Survey form</h3>
 				</div>
-				<div class="project">
-					<img class="project__img" src="img/react-docs.png" alt="" />
-					<h3 class="project__title">React docs</h3>
+				<div class="project project-tile">
+					<a href="https://codepen.io/danijel7/pen/qBrBWro" target="_blank">
+						<img class="project__img" src="img/react-docs.png" alt=""
+					/></a>
+
+					<h3 class="project__title project-title">React docs</h3>
 				</div>
-				<div class="project">
-					<img class="project__img" src="img/tribute-page.png" alt="" />
-					<h3 class="project__title">Tribute Page</h3>
+				<div class="project project-tile">
+					<a href="https://codepen.io/danijel7/pen/gOgNxdN" target="_blank">
+						<img class="project__img" src="img/tribute-page.png" alt=""
+					/></a>
+					<h3 class="project__title project-title">Tribute Page</h3>
 				</div>
 			</div>
 		</section>
 
-		<footer class="footer">
+		<footer class="footer" id="contact">
 			<div class="footer__content">
 				<h2 class="footer__title">Let's work together...</h2>
 				<div class="footer__contacts">
-					<p class="footer__contacts__para">
-						<span class="footer__contacts__icon"
-							><i class="fab fa-github"></i
-						></span>
-						Github
-					</p>
-					<p class="footer__contacts__para">
-						<span class="footer__contacts__icon"
-							><i class="fab fa-twitter"></i></span
-						>Twitter
-					</p>
-					<p class="footer__contacts__para">
-						<span class="footer__contacts__icon"
-							><i class="fab fa-codepen"></i></span
-						>Codepen
-					</p>
-					<p class="footer__contacts__para">
-						<span class="footer__contacts__icon"
-							><i class="fab fa-linkedin"></i></span
-						>Linkedin
-					</p>
+					<a
+						href="https://github.com/danijel374"
+						target="_blank"
+						id="profile-link"
+					>
+						<p class="footer__contacts__para">
+							<span class="footer__contacts__icon"
+								><i class="fab fa-github"></i></span
+							>Github
+						</p></a
+					>
+					<a href="https://twitter.com/DanijelPrskalo" target="_blank">
+						<p class="footer__contacts__para">
+							<span class="footer__contacts__icon"
+								><i class="fab fa-twitter"></i></span
+							>Twitter
+						</p></a
+					>
+					<a href="https://codepen.io/danijel7" target="_blank">
+						<p class="footer__contacts__para">
+							<span class="footer__contacts__icon"
+								><i class="fab fa-codepen"></i></span
+							>Codepen
+						</p></a
+					>
+
+					<a
+						href="https://www.linkedin.com/in/danijel-prskalo-a91a81197/"
+						target="_blank"
+					>
+						<p class="footer__contacts__para">
+							<span class="footer__contacts__icon"
+								><i class="fab fa-linkedin"></i></span
+							>Linkedin
+						</p></a
+					>
 				</div>
 			</div>
 			<div class="footer__copy">
