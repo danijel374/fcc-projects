@@ -95,6 +95,7 @@ body {
     font-weight: 700;
     padding: 1rem; }
   .header__btn {
+    text-decoration: none;
     color: black;
     border: none;
     outline: none;
