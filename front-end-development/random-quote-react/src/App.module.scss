@@ -1,0 +1,88 @@
+.App {
+  background-color: rgba(233, 224, 208, 0.719);
+  border-radius: 3px;
+  width: 80vw;
+  min-height: 20rem;
+  max-width: 80rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  cite {
+    font-family: var(--font-secondary);
+  }
+
+  p {
+    text-align: right;
+    font-size: 1rem;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 2rem;
+
+    button {
+      align-self: flex-end;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:nth-child(2) {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background-color: #333;
+      color: rgba(255, 255, 255, 0.747);
+      font-weight: 700;
+      height: 3rem;
+      padding: 0 2rem;
+      transition: all 0.2s;
+    }
+
+    button:nth-child(2):hover {
+      background-color: #fff;
+      color: #333;
+    }
+
+    button:first-child {
+      font-size: 2rem;
+      border-radius: 50%;
+      padding: 1.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.096);
+    }
+
+    button:first-child:hover {
+      background-color: rgb(211, 211, 211);
+    }
+  }
+
+  header {
+    margin: 5rem 2rem;
+
+    p {
+      margin: 1rem;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+#loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #85db34;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
