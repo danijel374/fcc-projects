@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import classes from './App.module.scss';
 import { FaTwitter, FaQuoteLeft } from 'react-icons/fa';
 
-// create layout
+// create layout a
 // fetch quotes
 // populate quote
 // select random quote and update state
