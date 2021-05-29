@@ -46,11 +46,21 @@
       color: #333;
     }
 
+    button:nth-child(2):focus-visible {
+      box-shadow: 1px 1px 20px 9px #0000ee;
+    }
+
     button:first-child {
       font-size: 2rem;
       border-radius: 50%;
       padding: 1.5rem;
       border: 1px solid rgba(0, 0, 0, 0.096);
+
+      a:focus-visible {
+        box-shadow: 1px 1px 20px 9px #0000ee;
+        border-radius: 50%;
+        padding: 5px;
+      }
     }
 
     button:first-child:hover {
