@@ -50,16 +50,17 @@ function App() {
     <div className={classes.App} id='quote-box'>
       {content}
       <div>
-        <button>
-          <a
-            id='tweet-quote'
-            target='_blank'
-            rel='noreferrer'
-            href={`https://twitter.com/intent/tweet?text=${quote} - ${author}`}
-          >
+        {' '}
+        <a
+          id='tweet-quote'
+          target='_blank'
+          rel='noreferrer'
+          href={`https://twitter.com/intent/tweet?text=${quote} - ${author}`}
+        >
+          <button>
             <FaTwitter />
-          </a>
-        </button>
+          </button>{' '}
+        </a>
         <button id='new-quote' onClick={sendRequest}>
           New Quote
         </button>
