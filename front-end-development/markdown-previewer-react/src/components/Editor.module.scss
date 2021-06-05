@@ -1,0 +1,11 @@
+.Editor {
+  width: 100%;
+  background-color: rgb(241, 241, 241);
+  height: 30rem;
+
+  &__heading {
+    background-color: rgb(243, 245, 235);
+    text-align: center;
+    padding: 1rem;
+  }
+}
