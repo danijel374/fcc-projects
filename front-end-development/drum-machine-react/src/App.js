@@ -1,4 +1,4 @@
-import './App.module.scss';
+import classes from './App.module.scss';
 import DrumPad from './components/DrumPad';
 
 import React from 'react';
@@ -61,17 +61,26 @@ const bankOne = [
 ];
 
 function App() {
-  const [whatIsPlaying, setWhatIsPlaying] = React.useState('idk');
+  const [whatIsPlaying, setWhatIsPlaying] = React.useState(
+    'Pres/click to play!'
+  );
 
   React.useEffect(() => {
     const AUDIOALL = document.querySelectorAll('.clip');
     document.addEventListener('keydown', (e) => {
       const AUDIOTOPLAY = document.getElementById(e.key.toUpperCase());
 
-      AUDIOALL.forEach((note) => {
+      AUDIOALL.forEach((note, index) => {
         if (note.id.toLowerCase() === e.key.toLowerCase()) {
+          AUDIOTOPLAY.parentElement.classList.add('active');
+
+          AUDIOTOPLAY.currentTime = 0;
           AUDIOTOPLAY.play();
-          whatIsPlayingHandler(note.id);
+          whatIsPlayingHandler(bankOne[index].id);
+
+          AUDIOTOPLAY.addEventListener('ended', () => {
+            AUDIOTOPLAY.parentElement.classList.remove('active');
+          });
         }
       });
     });
@@ -82,18 +91,20 @@ function App() {
   };
 
   return (
-    <div className='App' id='drum-machine'>
+    <div className={classes.App} id='drum-machine'>
       <div id='display'>
-        {whatIsPlaying}
-        {bankOne.map((el) => (
-          <DrumPad
-            key={el.id}
-            id={el.id}
-            keyTrigger={el.keyTrigger}
-            url={el.url}
-            whatIsPlayingHandler={whatIsPlayingHandler}
-          ></DrumPad>
-        ))}
+        <p> {whatIsPlaying}</p>
+        <div className={classes.App__display}>
+          {bankOne.map((el) => (
+            <DrumPad
+              key={el.id}
+              id={el.id}
+              keyTrigger={el.keyTrigger}
+              url={el.url}
+              whatIsPlayingHandler={whatIsPlayingHandler}
+            ></DrumPad>
+          ))}
+        </div>
       </div>
     </div>
   );
